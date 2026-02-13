@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 336 43% 94%;
+    --foreground: 336 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 336 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 336 20% 20%;
+    --primary: 347 100% 91%;
+    --primary-foreground: 336 40% 30%;
+    --secondary: 240 67% 94%;
+    --secondary-foreground: 240 20% 30%;
+    --muted: 336 20% 90%;
+    --muted-foreground: 336 10% 40%;
+    --accent: 240 67% 94%;
+    --accent-foreground: 240 20% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 347 50% 85%;
+    --input: 347 50% 85%;
+    --ring: 347 100% 80%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.heart-beat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.15); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
